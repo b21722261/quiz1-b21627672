@@ -1,0 +1,17 @@
+#gravity calculator
+#date:16.10.2017
+#written by b21627672
+
+0 read r1               #input for fallingTime
+1 read r2               #input for initialPosition
+2 read r3               #input for initialVelocity
+3 setn r4 -10           #gravityConstant
+4 setn r5 2             
+5 mul r6 r4 r1          #multiply gravityConstant by fallingTime
+6 mul r6 r6 r1          #multiply the last multiplication result by fallingTime
+7 div r6 r6 r5          #divide the last multiplication result by 2
+8 mul r7 r3 r1          #multiple initialVelocity by fallingTime
+9 add r7 r7 r2          #add the last multiplication result by initialPosition
+10 add r6 r6 r7         #find the finalPosition
+11 write r6             #print the finalPosition
+12 halt
